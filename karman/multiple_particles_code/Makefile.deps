@@ -1,0 +1,107 @@
+# Automatically generated using 'make Makefile.tests'
+# DO NOT EDIT, edit 'Makefile' instead
+ALLTESTS = \
+	karman.c \
+
+plots: \
+	karman/plots.page \
+
+TESTS = \
+
+SPECIAL_TESTS = \
+
+ALLPAGES = \
+	karman.c.page \
+
+karman.s:	\
+	/home/michael/basilisk_1/src/embed.h \
+	/home/michael/basilisk_1/src/navier-stokes/centered.h \
+	/home/michael/basilisk_1/src/view.h \
+	./../Antoonvh/tracer-particles.h \
+	./../Antoonvh/scatter2.h \
+	./../Antoonvh/particle.h \
+	/home/michael/basilisk_1/src/utils.h \
+	/home/michael/basilisk_1/src/input.h \
+	/home/michael/basilisk_1/src/vertexbuffer.h \
+	/home/michael/basilisk_1/src/draw.h \
+	/home/michael/basilisk_1/src/draw_get.h \
+	/home/michael/basilisk_1/src/parse.h \
+	/home/michael/basilisk_1/src/fractions.h \
+	/home/michael/basilisk_1/src/gl/font.h \
+	/home/michael/basilisk_1/src/draw_json.h \
+	/home/michael/basilisk_1/src/gl/og_font.h \
+	/home/michael/basilisk_1/src/geometry.h \
+	/home/michael/basilisk_1/src/myc2d.h \
+	/home/michael/basilisk_1/src/myc.h \
+	/home/michael/basilisk_1/src/utils.h \
+	/home/michael/basilisk_1/src/output.h \
+	/home/michael/basilisk_1/src/run.h \
+	/home/michael/basilisk_1/src/timestep.h \
+	/home/michael/basilisk_1/src/bcg.h \
+	/home/michael/basilisk_1/src/viscosity-embed.h \
+	/home/michael/basilisk_1/src/viscosity.h \
+	/home/michael/basilisk_1/src/poisson.h \
+	/home/michael/basilisk_1/src/poisson.h \
+	/home/michael/basilisk_1/src/utils.h \
+	/home/michael/basilisk_1/src/fractions.h \
+	/home/michael/basilisk_1/src/embed-tree.h \
+	/home/michael/basilisk_1/src/grid/quadtree.h \
+	/home/michael/basilisk_1/src/grid/tree.h \
+	/home/michael/basilisk_1/src/grid/mempool.h \
+	/home/michael/basilisk_1/src/grid/foreach_cell.h \
+	/home/michael/basilisk_1/src/grid/neighbors.h \
+	/home/michael/basilisk_1/src/grid/tree-common.h \
+	/home/michael/basilisk_1/src/grid/tree-mpi.h \
+	/home/michael/basilisk_1/src/grid/balance.h \
+	/home/michael/basilisk_1/src/grid/multigrid-common.h \
+	/home/michael/basilisk_1/src/grid/cartesian-common.h \
+	/home/michael/basilisk_1/src/grid/events.h \
+	/home/michael/basilisk_1/src/grid/fpe.h \
+	/home/michael/basilisk_1/src/common.h \
+
+karman.c.tags:	\
+	/home/michael/basilisk_1/src/embed.h \
+	/home/michael/basilisk_1/src/navier-stokes/centered.h \
+	/home/michael/basilisk_1/src/view.h \
+	./../Antoonvh/tracer-particles.h \
+	./../Antoonvh/scatter2.h \
+	./../Antoonvh/particle.h \
+	/home/michael/basilisk_1/src/utils.h \
+	/home/michael/basilisk_1/src/input.h \
+	/home/michael/basilisk_1/src/vertexbuffer.h \
+	/home/michael/basilisk_1/src/draw.h \
+	/home/michael/basilisk_1/src/draw_get.h \
+	/home/michael/basilisk_1/src/parse.h \
+	/home/michael/basilisk_1/src/fractions.h \
+	/home/michael/basilisk_1/src/gl/font.h \
+	/home/michael/basilisk_1/src/draw_json.h \
+	/home/michael/basilisk_1/src/gl/og_font.h \
+	/home/michael/basilisk_1/src/geometry.h \
+	/home/michael/basilisk_1/src/myc2d.h \
+	/home/michael/basilisk_1/src/myc.h \
+	/home/michael/basilisk_1/src/utils.h \
+	/home/michael/basilisk_1/src/output.h \
+	/home/michael/basilisk_1/src/run.h \
+	/home/michael/basilisk_1/src/timestep.h \
+	/home/michael/basilisk_1/src/bcg.h \
+	/home/michael/basilisk_1/src/viscosity-embed.h \
+	/home/michael/basilisk_1/src/viscosity.h \
+	/home/michael/basilisk_1/src/poisson.h \
+	/home/michael/basilisk_1/src/poisson.h \
+	/home/michael/basilisk_1/src/utils.h \
+	/home/michael/basilisk_1/src/fractions.h \
+	/home/michael/basilisk_1/src/embed-tree.h \
+	/home/michael/basilisk_1/src/grid/quadtree.h \
+	/home/michael/basilisk_1/src/grid/tree.h \
+	/home/michael/basilisk_1/src/grid/mempool.h \
+	/home/michael/basilisk_1/src/grid/foreach_cell.h \
+	/home/michael/basilisk_1/src/grid/neighbors.h \
+	/home/michael/basilisk_1/src/grid/tree-common.h \
+	/home/michael/basilisk_1/src/grid/tree-mpi.h \
+	/home/michael/basilisk_1/src/grid/balance.h \
+	/home/michael/basilisk_1/src/grid/multigrid-common.h \
+	/home/michael/basilisk_1/src/grid/cartesian-common.h \
+	/home/michael/basilisk_1/src/grid/events.h \
+	/home/michael/basilisk_1/src/grid/fpe.h \
+	/home/michael/basilisk_1/src/common.h \
+

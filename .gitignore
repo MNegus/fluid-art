@@ -61,6 +61,13 @@ dkms.conf
 *_outputs/
 *.png
 *.avi
+*.mp4
+*.txt
+*.deps
+*.tst
 
 # vscode files
 .vscode
+
+# Gfs outputs
+*.gfs

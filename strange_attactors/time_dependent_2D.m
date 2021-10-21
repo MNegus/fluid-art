@@ -1,6 +1,6 @@
 %% Parameters
 found_initial_solution = false;
-NMAX = 1000;
+NMAX = 10000;
 
 % range = [-1, 0, 1];
 % range = -0.6 : 0.05 : 0.6;
@@ -9,7 +9,7 @@ no_params = 18;
 
 t = -2;
 tmax = 2;
-dt = 1e-2;
+dt = 1e-4;
 
 %% Finds initial configuration
 while found_initial_solution == false
@@ -48,12 +48,12 @@ close all;
 close(figure(1));
 figure(1);
 % hold on;
-g = arrayfun(@(x) animatedline(), 1 : NMAX)
+% g = arrayfun(@(x) animatedline(), 1 : NMAX)
 
 all_x_points = [];
 all_y_points = [];
 
-hWaitbar = waitbar(0, 'Iteration 1', 'Name', 'Solving problem','CreateCancelBtn','delete(gcbf)');
+% hWaitbar = waitbar(0, 'Iteration 1', 'Name', 'Solving problem','CreateCancelBtn','delete(gcbf)');
 while t < tmax
     % Update time
     t = t + dt
@@ -61,7 +61,7 @@ while t < tmax
     % Find new points
     xdiff = 0;
     for n = 1 : NMAX
-       [XNEW, YNEW] = update(ORIG_X_POINTS(n), ORIG_Y_POINTS(n), t, as);
+       [XNEW, YNEW] = update(X_POINTS(n), Y_POINTS(n), t, as);
        xdiff = max(xdiff, abs(XNEW - X_POINTS(n)));
        X_POINTS(n) = XNEW;
        Y_POINTS(n) = YNEW;
@@ -76,18 +76,18 @@ while t < tmax
     all_x_points = [all_x_points; filtered_x_points];
     all_y_points = [all_y_points; filtered_y_points];
     
-%     scatter(all_x_points, all_y_points, 0.1);
+    scatter(all_x_points, all_y_points, 0.1);
     
     %% Animated lines method
-    for n = 1 : 50
-        x = X_POINTS(n);
-        y = Y_POINTS(n);
-        if (abs(x) >= 1e3 && abs(y) >= 1e3)
-            clearpoints(g(n)); 
-        elseif (t > -2)
-            addpoints(g(n), x, y);
-        end
-    end
+%     for n = 1 : 2
+%         x = X_POINTS(n);
+%         y = Y_POINTS(n);
+%         if (abs(x) >= 1e3 && abs(y) >= 1e3)
+%             clearpoints(g(n)); 
+%         elseif (t > -2)
+%             addpoints(g(n), x, y);
+%         end
+%     end
     
     drawnow;
     if ~ishandle(hWaitbar)
@@ -103,7 +103,7 @@ while t < tmax
     
     
     
-    xdiff
+    disp(sprintf("No points = %d\n", length(all_x_points)));
     
 end
 

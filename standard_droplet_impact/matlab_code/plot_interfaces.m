@@ -12,8 +12,8 @@ plate_tol = 1e-2;
 %% Loops and plots
 close all;
 figure(1);
-hold on;
-for k = 0 : interval : max_timestep
+% hold on;
+for k = 0 : 37 : 1500
    % Name of interface file
     filename ...
         = sprintf('%s/interface_%d.txt', data_dir, k);
@@ -36,15 +36,12 @@ for k = 0 : interval : max_timestep
     
     % Saves xs and ys
     ys = sorted_points(:, 1);
-    xs = sorted_points(:, 2)
+    xs = sorted_points(:, 2);
     
     previous_x = xs(1);
-    q = 2
+    q = 2;
     while (q <= length(xs))
         if abs(xs(q) - previous_x) > 0.1
-            q
-            xs(q)
-            previous_x
             xs(q) = [];
             ys(q) = [];
         else
@@ -58,11 +55,23 @@ for k = 0 : interval : max_timestep
     full_ys = [flip(ys); max(ys); ys];
     
     % Plots
-%     plot(xs, ys);
-%     plot(-flip(xs), flip(ys));
     plot(full_xs, full_ys, 'color', 'black');
+    
+    xlim([-4, 4]);
+    ylim([0, 4]);
+    pbaspect([2 1 1]);
+    
     drawnow;
     pause(0.1);
+    
+    % Outputs as text file
+    full_data = [full_xs'; full_ys'];
+    fileID = fopen(sprintf("interface_data/interface_%d.txt", k),'w');
+    formatSpec = '%.4f, %.4f\n';
+    fprintf(fileID, formatSpec, full_data);
+    fclose(fileID);
+    
+    
 end
 
 
@@ -79,5 +88,6 @@ hAxes.XRuler.Axle.LineStyle = 'none';
 hAxes.YRuler.Axle.LineStyle = 'none'; 
 set(gca,'xtick',[]);
 set(gca,'ytick',[])
+set(gca, 'color', 'none');
 
 plot2svg('droplet_interfaces.svg');
